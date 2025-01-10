@@ -1,0 +1,21 @@
+{{define "core"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.svg">
+    <link href="/static/output.css" rel="stylesheet">
+    <title>{{block "title" .}}Page Title{{end}}</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    {{ template "nav" }}
+    <div class="container mx-auto">
+        {{ block "content" .}}
+          <div>Page content</div>
+        {{end}}
+    </div>
+  </body>
+  {{ template "foot" }}
+</html>
+{{ end }}

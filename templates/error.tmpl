@@ -1,0 +1,8 @@
+{{define "title"}}{{ .Status }}{{end}}
+{{define "content"}}
+<h1 class="text-5xl font-bold">{{.Status}}</h1>
+<div class="mt-2">
+  <p class="text-gray-500">Looks like something messed up?</p>
+</div>
+{{end}}
+{{ template "core" .}}

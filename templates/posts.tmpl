@@ -1,0 +1,17 @@
+{{define "posts_nav_style"}}{{template "nav_selected"}}{{end}}
+{{define "title"}}Posts{{end}}
+{{define "content"}}
+<h1 class="text-4xl font-bold">These are the posts</h1>
+<div>
+  {{ range $post := .Posts }}
+  <div class="mt-4">
+    <div>
+      <a href="{{$post.Slug}}" class="text-xl ">{{$post.Title}}</a>
+      <p class="text-xs text-gray-500">{{$post.Date}}</p>
+      <p><span class="text-gray-500">{{$post.Description}}</span></p>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{end}}
+{{ template "core" .}}
